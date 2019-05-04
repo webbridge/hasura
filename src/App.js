@@ -2,13 +2,13 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-function App() {
-  handleFunction = () => {
-    fetch('https://upbeat-euler-c4c81e.netlify.com/.netlify/functions/hello').then(res => {
-      console.log(res)
-    })
-  }
+const handleFunction = () => {
+  fetch('https://upbeat-euler-c4c81e.netlify.com/.netlify/functions/hello').then(res => {
+    console.log(res)
+  })
+}
 
+function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +19,7 @@ function App() {
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
-        <button onClick={this.handleFunction}>lambda function</button>
+        <button onClick={handleFunction}>lambda function</button>
       </header>
     </div>
   )
